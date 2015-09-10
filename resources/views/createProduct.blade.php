@@ -2,18 +2,25 @@
         
 @section('content')
 			<h2>Add new product</h2>
-			{!! Form::open(array('url' => 'foo/bar')) !!}
+			{!! Form::open(array('url' => 'products')) !!}
 				<fielset>
-					<label for="">Name.</label>
-					<input type="text" name="" id="">
+				
+					{!! Form::label('name', 'Product Name') !!}
+					{!! Form::text('name') !!}
 					
-					<label for="">Email.</label>
-					<input type="text" name="" id="">
+					{!! Form::label('description', 'Description') !!}
+					{!! Form::textarea('description') !!}
 					
-					<label for="">Message.</label>
-					<textarea type="text" name="" id=""></textarea>
+					{!! Form::label('price', 'Price') !!}
+					{!! Form::text('price') !!}
 					
-					<input type="submit" value="Send">
+					{!! Form::label('photo', 'Photo') !!}
+					{!! Form::text('photo',"shubunkin.jpg") !!}
+					
+					{!! Form::label('type_id', 'Product type') !!}
+					{!! Form::select('type_id',\App\Models\Type::lists("name","id")) !!}
+					
+					<input type="submit" value="Create product">
 				</fielset>
 				
             {!! Form::close() !!}
