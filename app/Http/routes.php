@@ -74,7 +74,7 @@ Route::get('/', function () {
 /*                              About Page Route                             */
 /*===========================================================================*/
     Route::get('about', function () {
-            return view('about');
+        return view('about');
     });
 /*===========================================================================*/
 
@@ -110,6 +110,9 @@ Route::get('/', function () {
 /*===========================================================================*/
 /*                              Adding Products                              */
 /*===========================================================================*/
-    Route::post('products',function (){
+    Route::post('products',function (\App\Http\Requests\CreateProductRequest $request){
+      $product = \App\Models\Product::create($request->all());
+        
+      return redirect('types/'.$product->type->id);
     });
 /*===========================================================================*/
