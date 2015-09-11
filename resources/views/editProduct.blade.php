@@ -1,8 +1,8 @@
 @extends('templates.main')
         
 @section('content')
-			<h2>Add new product</h2>
-			{!! Form::open(array('url' => 'products')) !!}
+			<h2>Edit product</h2>
+			{!! Form::model($product,array('url' => 'products/'.$product->id,'method'=> 'put')) !!}
 				<fielset>
 					{!! Form::label('name', 'Product Name') !!}
 					{!! Form::text('name') !!}
@@ -16,13 +16,10 @@
 					{!! Form::text('price') !!}
 					{!! $errors->first('price','<p class="error">:message</p>')!!}
 					
-					{!! Form::label('photo', 'Photo') !!}
-					{!! Form::text('photo',"shubunkin.jpg") !!}
-					
 					{!! Form::label('type_id', 'Product type') !!}
 					{!! Form::select('type_id',\App\Models\Type::lists("name","id")) !!}
 					
-					<input type="submit" value="Create product">
+					<input type="submit" value="Update product">
 				</fielset>
 				
             {!! Form::close() !!}
