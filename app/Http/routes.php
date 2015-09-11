@@ -108,7 +108,7 @@ Route::get('/', function () {
 
 
 /*===========================================================================*/
-/*                              Adding Products                              */
+/*                              Adding Form for Products                     */
 /*===========================================================================*/
     Route::post('products',function (\App\Http\Requests\CreateProductRequest $request){
       $product = \App\Models\Product::create($request->all());
@@ -120,7 +120,7 @@ Route::get('/', function () {
 
 
 /*===========================================================================*/
-/*                              Editing Products                              */
+/*                             Editing Form for Products                     */
 /*===========================================================================*/
     Route::get('products/{id}/edit',function ($id){
         $product = \App\Models\Product::find($id);
@@ -130,9 +130,9 @@ Route::get('/', function () {
 
 
 /*===========================================================================*/
-/*                              Updating Products                              */
+/*                             Updating Form for Products                    */
 /*===========================================================================*/
-    Route::put('products/{id}',function ($id){
+    Route::put('products/{id}',function ($id,\App\Http\Requests\UpdateProductRequest $request){
         $product = \App\Models\Product::find($id);
 //      return view('editProduct',compact('product'));
     });
