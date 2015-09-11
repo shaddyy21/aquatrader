@@ -163,6 +163,17 @@ Route::get('/', function () {
 /*===========================================================================*/
     Route::post('users', function (\App\Http\Requests\CreateUserRequest $request){
         $user = \App\Models\User::create($request->all());
+        return redirect('users/'.$user->id);
+//        return view('createUser');
+    });
+/*===========================================================================*/
+
+
+/*===========================================================================*/
+/*                             Editing Form for Users                         */
+/*===========================================================================*/
+    Route::post('users/{id}/edit', function (){
+        $user = \App\Models\User::create($request->all());
 //        return redirect('users/'.$user->id);
         return view('welcome');
     });
