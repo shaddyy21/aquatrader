@@ -83,23 +83,23 @@ Route::get('/', function () {
 /*                              Contact Page Route                           */
 /*===========================================================================*/
     Route::get('contact', function () {
-            return view('contact');
+        return view('contact');
     });
 /*===========================================================================*/
 
 
 /*===========================================================================*/
-/*                              Types Page Route                           */
+/*                              Types Page Route                             */
 /*===========================================================================*/
     Route::get('types/{id}', function ($id) {
         $type = \App\Models\Type::find($id);
-            return view('types',compact("type"));
+        return view('types',compact("type"));
     });
 /*===========================================================================*/
 
 
 /*===========================================================================*/
-/*                              Create Products                           */
+/*                              Create Products                              */
 /*===========================================================================*/
     Route::get('products/create', function () {
       return view('createProduct');
@@ -112,7 +112,6 @@ Route::get('/', function () {
 /*===========================================================================*/
     Route::post('products',function (\App\Http\Requests\CreateProductRequest $request){
       $product = \App\Models\Product::create($request->all());
-        
       return redirect('types/'.$product->type->id);
     });
 /*===========================================================================*/
@@ -124,7 +123,7 @@ Route::get('/', function () {
 /*===========================================================================*/
     Route::get('products/{id}/edit',function ($id){
         $product = \App\Models\Product::find($id);
-      return view('editProduct',compact('product'));
+        return view('editProduct',compact('product'));
     });
 /*===========================================================================*/
 
@@ -134,6 +133,42 @@ Route::get('/', function () {
 /*===========================================================================*/
     Route::put('products/{id}',function ($id,\App\Http\Requests\UpdateProductRequest $request){
         $product = \App\Models\Product::find($id);
-//      return view('editProduct',compact('product'));
+        $product->fill($request->all());
+        $product->save();
+        return redirect('types/'.$product->type->id);
     });
 /*===========================================================================*/
+
+/*===========================================================================*/
+/*                             Create Users                                   */
+/*===========================================================================*/
+    Route::get('users/create', function (){
+        return view('createUser');
+    });
+/*===========================================================================*/
+
+
+/*===========================================================================*/
+/*                             Users Page Route                              */
+/*===========================================================================*/
+    Route::get('users/{id}', function ($id){
+        $user = \App\Models\User::find($id);
+        return view('users',compact("user"));
+    });
+/*===========================================================================*/
+
+
+/*===========================================================================*/
+/*                             Adding Form for Users                         */
+/*===========================================================================*/
+    Route::post('users', function (\App\Http\Requests\CreateUserRequest $request){
+        $user = \App\Models\User::create($request->all());
+//        return redirect('users/'.$user->id);
+        return view('welcome');
+    });
+/*===========================================================================*/
+
+
+
+
+
