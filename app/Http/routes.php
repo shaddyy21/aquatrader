@@ -153,7 +153,7 @@ Route::get('/', function () {
 /*===========================================================================*/
     Route::get('users/{id}', function ($id){
         $user = \App\Models\User::find($id);
-        return view('users',compact("user"));
+        return view('users',compact('user'));
     });
 /*===========================================================================*/
 
@@ -164,7 +164,6 @@ Route::get('/', function () {
     Route::post('users', function (\App\Http\Requests\CreateUserRequest $request){
         $user = \App\Models\User::create($request->all());
         return redirect('users/'.$user->id);
-//        return view('createUser');
     });
 /*===========================================================================*/
 
@@ -172,10 +171,9 @@ Route::get('/', function () {
 /*===========================================================================*/
 /*                             Editing Form for Users                         */
 /*===========================================================================*/
-    Route::post('users/{id}/edit', function (){
-        $user = \App\Models\User::create($request->all());
-//        return redirect('users/'.$user->id);
-        return view('welcome');
+    Route::get('users/{id}/edit', function ($id){
+        $user = \App\Models\User::find($id);
+        return view('editUser',compact('user'));
     });
 /*===========================================================================*/
 

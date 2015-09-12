@@ -24,7 +24,10 @@ class UpdateUserRequest extends Request
     public function rules()
     {
         return [
-            //
+            "First_Name"=>"required",
+           "Last_Name"=>"required",
+           "E-mail"=>"required",
+           "Username"=>"required",
         ];
     }
 }

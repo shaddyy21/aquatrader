@@ -13,7 +13,7 @@
                     {!! $errors->first('Last_Name','<p class="error">:message</p>')!!}
 					
 					{!! Form::label('E-mail', 'E-Mail:') !!}
-					{!! Form::text('Email') !!}
+					{!! Form::text('E-mail') !!}
                     {!! $errors->first('E-mail','<p class="error">:message</p>')!!}
 					
 					{!! Form::label('Username', 'User Name:') !!}
