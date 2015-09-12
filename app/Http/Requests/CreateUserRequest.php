@@ -24,12 +24,13 @@ class CreateUserRequest extends Request
     public function rules()
     {
         return [
-           "First_Name"=>"required",
-           "Last_Name"=>"required",
-           "E-mail"=>"required",
-           "Username"=>"required",
+           "firstname"=>"required",
+           "lastname"=>"required",
+           "email"=>"required",
+           "username"=>"required",
            "password"=>"required",
            "password_confirmation"=>"required"
         ];
+        
     }
 }

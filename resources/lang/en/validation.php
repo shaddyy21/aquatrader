@@ -91,6 +91,23 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        
+        'firstname' => [
+            'required' => 'The first name field is required.',
+        ], 
+        
+        'lastname' => [
+            'required' => 'The last name field is required.',
+        ],
+        
+        'email' => [
+            'required' => 'The e-mail field is required.',
+        ],
+        
+        'username' => [
+            'required' => 'The user name field is required.',
+        ],
+        
     ],
 
     /*

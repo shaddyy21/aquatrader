@@ -4,21 +4,21 @@
 			<h2>Create new Account</h2>
 			{!! Form::open(array('url' => 'users')) !!}
 				<fielset>
-					{!! Form::label('First_Name', 'First Name:') !!}
-					{!! Form::text('First_Name') !!}
-                    {!! $errors->first('First_Name','<p class="error">:message</p>')!!}
+					{!! Form::label('firstname', 'First Name:') !!}
+					{!! Form::text('firstname') !!}
+                    {!! $errors->first('firstname','<p class="error">:message</p>')!!}
                     
-                    {!! Form::label('Last_Name', 'Last Name:') !!}
-					{!! Form::text('Last_Name') !!}
-                    {!! $errors->first('Last_Name','<p class="error">:message</p>')!!}
+                    {!! Form::label('lastname', 'Last Name:') !!}
+					{!! Form::text('lastname') !!}
+                    {!! $errors->first('lastname','<p class="error">:message</p>')!!}
 					
-					{!! Form::label('E-mail', 'E-Mail:') !!}
-					{!! Form::text('E-mail') !!}
-                    {!! $errors->first('E-mail','<p class="error">:message</p>')!!}
+					{!! Form::label('email', 'E-Mail:') !!}
+					{!! Form::text('email') !!}
+                    {!! $errors->first('email','<p class="error">:message</p>')!!}
 					
-					{!! Form::label('Username', 'User Name:') !!}
-					{!! Form::text('Username') !!}
-					{!! $errors->first('Username','<p class="error">:message</p>')!!}
+					{!! Form::label('username', 'User Name:') !!}
+					{!! Form::text('username') !!}
+					{!! $errors->first('username','<p class="error">:message</p>')!!}
 					
 					{!! Form::label('password', 'Password:') !!}
 					{!! Form::password('password') !!}
