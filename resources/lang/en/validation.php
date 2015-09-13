@@ -93,27 +93,27 @@ return [
         ],
         
         'firstname' => [
-            'required' => '*The first name field is required.',
+            'required' => '*Please fill in first name field.',
         ], 
         
         'lastname' => [
-            'required' => '*The last name field is required.',
+            'required' => '*Please fill in last name field.',
         ],
         
         'email' => [
-            'required' => '*The e-mail field is required.',
+            'required' => '*Please fill in e-mail field.',
         ],
         
         'username' => [
-            'required' => '*The user name field is required.',
+            'required' => '*Please fill in user name field.',
         ],
         
         'password' => [
-            'required' => '*The password field is required.',
+            'required' => '*Please fill in password field.',
         ], 
         
         'password_confirmation' => [
-            'required' => '*The password confirm field is required.',
+            'required' => '*Please fill in password confirm field.',
         ],
         
         
