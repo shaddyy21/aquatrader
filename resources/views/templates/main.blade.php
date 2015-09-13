@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="{{asset('stylesheets/base.css')}}">
 <!-- 	<link rel="stylesheet" href="stylesheets/skeleton.css"> -->
 	<link rel="stylesheet" href="{{asset('stylesheets/layout.css')}}">
+	<link rel="stylesheet" href="{{asset('stylesheets/animate.css')}}">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -73,5 +74,9 @@
 
 <!-- End Document
 ================================================== -->
+<!--==========jQuery==============================-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{asset('js/jQScript.js')}}"></script>
 </body>
 </html>

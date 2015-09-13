@@ -129,7 +129,7 @@ Route::get('/', function () {
 
 
 /*===========================================================================*/
-/*                             Updating Form for Products                    */
+/*                             Updating Products                             */
 /*===========================================================================*/
     Route::put('products/{id}',function ($id,\App\Http\Requests\UpdateProductRequest $request){
         $product = \App\Models\Product::find($id);
@@ -174,6 +174,18 @@ Route::get('/', function () {
     Route::get('users/{id}/edit', function ($id){
         $user = \App\Models\User::find($id);
         return view('editUser',compact('user'));
+    });
+/*===========================================================================*/
+
+
+/*===========================================================================*/
+/*                             Updating Users                                */
+/*===========================================================================*/
+    Route::put('users/{id}', function ($id,\App\Http\Requests\UpdateUserRequest $request){
+        $user = \App\Models\User::find($id);
+        $user->fill($request->all());
+        $user->save();
+        return redirect('users/'.$user->id);
     });
 /*===========================================================================*/
 

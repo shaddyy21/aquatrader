@@ -6,7 +6,7 @@
 				<fielset>
 					{!! Form::label('firstname', 'First Name:') !!}
 					{!! Form::text('firstname') !!}
-                    {!! $errors->first('firstname','<p class="error">:message</p>')!!}
+                    {!! $errors->first('firstname','<p class="error animated flash">:message</p>')!!}
                     
                     {!! Form::label('lastname', 'Last Name:') !!}
 					{!! Form::text('lastname') !!}
@@ -28,7 +28,7 @@
 					{!! Form::password('password_confirmation') !!}
                     {!! $errors->first('password_confirmation','<p class="error">:message</p>')!!}
 					
-					<input type="submit" value="Create account">
+					<input type="submit" id="sub" value="Create account">
 				</fielset>
 				
             {!! Form::close() !!}

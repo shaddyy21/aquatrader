@@ -13,7 +13,7 @@ class UpdateUserRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,10 +24,9 @@ class UpdateUserRequest extends Request
     public function rules()
     {
         return [
-            "First_Name"=>"required",
-           "Last_Name"=>"required",
-           "E-mail"=>"required",
-           "Username"=>"required",
+            "firstname"=>"required",
+           "lastname"=>"required",
+           "email"=>"required",
         ];
     }
 }
