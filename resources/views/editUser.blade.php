@@ -6,15 +6,15 @@
 				<fielset>
 					{!! Form::label('firstname', 'First Name') !!}
 					{!! Form::text('firstname') !!}
-                    {!! $errors->first('First_Name','<p class="error">:message</p>')!!}
+                    {!! $errors->first('firstname','<p class="error">:message</p>')!!}
 					
 					{!! Form::label('lastname', 'Last Name') !!}
 					{!! Form::text('lastname') !!}
-                    {!! $errors->first('Last_Name','<p class="error">:message</p>')!!}
+                    {!! $errors->first('lastname','<p class="error">:message</p>')!!}
 					
 					{!! Form::label('email', 'E-mail') !!}
 					{!! Form::text('email') !!}
-					{!! $errors->first('E-mail','<p class="error">:message</p>')!!}
+					{!! $errors->first('email','<p class="error">:message</p>')!!}
 					
 					<input type="submit" value="Update profile">
 				</fielset>

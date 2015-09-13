@@ -6,7 +6,7 @@
 				<fielset>
 					{!! Form::label('firstname', 'First Name:') !!}
 					{!! Form::text('firstname') !!}
-                    {!! $errors->first('firstname','<p class="error animated flash">:message</p>')!!}
+                    {!! $errors->first('firstname','<p class="error">:message</p>')!!}
                     
                     {!! Form::label('lastname', 'Last Name:') !!}
 					{!! Form::text('lastname') !!}
