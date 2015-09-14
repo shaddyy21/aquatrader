@@ -101,7 +101,7 @@ return [
         ],
         
         'email' => [
-            'required' => '*Please fill in e-mail field.',
+            'required' => '*Please fill in e-mail field.', 'email' => '*Please enter a valid e-mail.',
         ],
         
         'username' => [
@@ -109,13 +109,16 @@ return [
         ],
         
         'password' => [
-            'required' => '*Please fill in password field.',
+            'required' => '*Please fill in password field.', 'confirmed' => '*Confirm password doesnt match password.',
         ], 
+        
+//        'password' => [
+//            'required|confirmed' => '*Confirm password doesnt match password.',
+//        ],
         
         'password_confirmation' => [
             'required' => '*Please fill in password confirm field.',
         ],
-        
         
     ],
 

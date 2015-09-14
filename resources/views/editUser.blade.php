@@ -16,6 +16,11 @@
 					{!! Form::text('email') !!}
 					{!! $errors->first('email','<p class="error">:message</p>')!!}
 					
+					{!! Form::label('username', 'User Name:') !!}
+					{!! Form::text('username') !!}
+					{!! $errors->first('username','<p class="error">:message</p>')!!}
+					
+					
 					<input type="submit" value="Update profile">
 				</fielset>
 				
