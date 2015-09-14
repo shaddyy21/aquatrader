@@ -109,7 +109,7 @@ return [
         ],
         
         'password' => [
-            'required' => '*Please fill in password field.', 'confirmed' => '*Confirm password doesnt match password.',
+            'required' => '*Please fill in password field.', 'confirmed' => '*Passwords doesn&apos;t match password.',
         ], 
         
 //        'password' => [

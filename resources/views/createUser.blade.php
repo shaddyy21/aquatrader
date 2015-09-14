@@ -26,7 +26,7 @@
 					
 					{!! Form::label('password_confirmation', 'Confirm Password:') !!}
 					{!! Form::password('password_confirmation') !!}
-                    {!! $errors->first('password','<p class="error">:message</p>')!!}
+                    {!! $errors->first('password_confirmation','<p class="error">:message</p>')!!}
 					
 					<input type="submit" id="sub" value="Create account">
 				</fielset>
