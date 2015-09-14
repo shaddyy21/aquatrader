@@ -91,32 +91,59 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        /*============================================================================*/
+        /*                      User custom error messages                            */
+        /*============================================================================*/
+            'firstname' => [
+                'required' => '*Please fill in first name field.',
+            ], 
         
-        'firstname' => [
-            'required' => '*Please fill in first name field.',
-        ], 
+            'lastname' => [
+                'required' => '*Please fill in last name field.',
+            ],
         
-        'lastname' => [
-            'required' => '*Please fill in last name field.',
-        ],
+            'email' => [
+                'required' => '*Please fill in e-mail field.', 'email' => '*Please enter a valid e-mail.',
+            ],
         
-        'email' => [
-            'required' => '*Please fill in e-mail field.', 'email' => '*Please enter a valid e-mail.',
-        ],
+            'username' => [
+                'required' => '*Please fill in user name field.', 'unique' => '*User name already taken',
+            ],
         
-        'username' => [
-            'required' => '*Please fill in user name field.', 'unique' => '*User name already taken',
-        ],
+            'password' => [
+                'required' => '*Please fill in password field.', 'confirmed' => '*Passwords doesn&apos;t match password.',
+            ], 
         
-        'password' => [
-            'required' => '*Please fill in password field.', 'confirmed' => '*Passwords doesn&apos;t match password.',
-        ], 
+            'password_confirmation' => [
+                'required' => '*Please fill in password confirm field.',
+            ],
+        /*============================================================================*/
         
-        'password_confirmation' => [
-            'required' => '*Please fill in password confirm field.',
-        ],
+        /*============================================================================*/
+        /*                      Product custom error messages                         */
+        /*============================================================================*/
         
-    ],
+            'name' => [
+                'required' => '*Please fill in product name field.',
+            ],
+        
+            'description' => [
+                'required' => '*Please fill in description field.',
+            ],
+        
+            'price' => [
+                'required' => '*Please fill in price field.', 'numeric' => '*Please enter a numeric value for price.',
+            ],
+        
+            'photo' => [
+                'required' => '*Please select a file.',
+            ],
+        
+        
+        
+        
+        
+    ],  
 
     /*
     |--------------------------------------------------------------------------

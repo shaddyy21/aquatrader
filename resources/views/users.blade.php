@@ -15,4 +15,6 @@
 			<h5>User Name</h5>
 			<h4>{{$user->username}}</h4>
 			
+			<button>Edit</button>
+			
 @stop

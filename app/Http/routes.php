@@ -108,10 +108,14 @@ Route::get('/', function () {
 
 
 /*===========================================================================*/
-/*                              Adding Form for Products                     */
+/*                              Adding Products to DB                        */
 /*===========================================================================*/
     Route::post('products',function (\App\Http\Requests\CreateProductRequest $request){
       $product = \App\Models\Product::create($request->all());
+      $fileName = \Carbon\Carbon::now()->timestamp."_product.jpg";
+      $request->file('photo')->move('productphotos', $fileName);
+      $product->photo = $fileName;
+      $product->save();
       return redirect('types/'.$product->type->id);
     });
 /*===========================================================================*/
