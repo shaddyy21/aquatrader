@@ -105,16 +105,12 @@ return [
         ],
         
         'username' => [
-            'required' => '*Please fill in user name field.',
+            'required' => '*Please fill in user name field.', 'unique' => '*User name already taken',
         ],
         
         'password' => [
             'required' => '*Please fill in password field.', 'confirmed' => '*Passwords doesn&apos;t match password.',
         ], 
-        
-//        'password' => [
-//            'required|confirmed' => '*Confirm password doesnt match password.',
-//        ],
         
         'password_confirmation' => [
             'required' => '*Please fill in password confirm field.',
