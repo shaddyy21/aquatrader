@@ -73,18 +73,14 @@ Route::get('/', function () {
 /*===========================================================================*/
 /*                              About Page Route                             */
 /*===========================================================================*/
-    Route::get('about', function () {
-        return view('about');
-    });
+    Route::get('about', "PagesController@showAbout");
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                              Contact Page Route                           */
 /*===========================================================================*/
-    Route::get('contact', function () {
-        return view('contact');
-    });
+    Route::get('contact', "PagesController@showContact");
 /*===========================================================================*/
 
 
@@ -101,23 +97,14 @@ Route::get('/', function () {
 /*===========================================================================*/
 /*                              Create Products                              */
 /*===========================================================================*/
-    Route::get('products/create', function () {
-      return view('createProduct');
-    });
+//    Route::get('products/create', 'ProductsController@create');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                              Adding Products to DB                        */
 /*===========================================================================*/
-    Route::post('products',function (\App\Http\Requests\CreateProductRequest $request){
-      $product = \App\Models\Product::create($request->all());
-      $fileName = \Carbon\Carbon::now()->timestamp."_product.jpg";
-      $request->file('photo')->move('productphotos', $fileName);
-      $product->photo = $fileName;
-      $product->save();
-      return redirect('types/'.$product->type->id);
-    });
+//    Route::post('products', 'ProductsController@store');
 /*===========================================================================*/
 
 
@@ -125,78 +112,62 @@ Route::get('/', function () {
 /*===========================================================================*/
 /*                             Editing Form for Products                     */
 /*===========================================================================*/
-    Route::get('products/{id}/edit',function ($id){
-        $product = \App\Models\Product::find($id);
-        return view('editProduct',compact('product'));
-    });
+//    Route::get('products/{id}/edit', 'ProductsController@edit');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Updating Products                             */
 /*===========================================================================*/
-    Route::put('products/{id}',function ($id,\App\Http\Requests\UpdateProductRequest $request){
-        $product = \App\Models\Product::find($id);
-        $product->fill($request->all());
-        $product->save();
-        return redirect('types/'.$product->type->id);
-    });
+//    Route::put('products/{id}','ProductsController@update');
+/*===========================================================================*/
+
+/*===========================================================================*/
+/*                      Products Controller Mapping                          */
+/*===========================================================================*/
+    Route::resource('products','ProductsController');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Create Users Form                             */
 /*===========================================================================*/
-    Route::get('users/create', function (){
-        return view('createUser');
-    });
+//    Route::get('users/create', 'UsersController@create');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Adding Users to DB                            */
 /*===========================================================================*/
-    Route::post('users', function (\App\Http\Requests\CreateUserRequest $request){
-        $user = \App\Models\User::create($request->all());
-        $user->password = bcrypt($user->password);
-        $user->save();
-        return redirect('users/'.$user->id);
-    });
+//    Route::post('users', 'UsersController@store');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Users Page Route                              */
 /*===========================================================================*/
-    Route::get('users/{id}', function ($id){
-        $user = \App\Models\User::find($id);
-        return view('users',compact('user'));
-    });
+//    Route::get('users/{id}', 'UsersController@show');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Editing Form for Users                         */
 /*===========================================================================*/
-    Route::get('users/{id}/edit', function ($id){
-        $user = \App\Models\User::find($id);
-        return view('editUser',compact('user'));
-    });
+//    Route::get('users/{id}/edit', 'UsersController@edit');
 /*===========================================================================*/
 
 
 /*===========================================================================*/
 /*                             Updating Users Details                        */
 /*===========================================================================*/
-    Route::put('users/{id}', function ($id,\App\Http\Requests\UpdateUserRequest $request){
-        $user = \App\Models\User::find($id);
-        $user->fill($request->all());
-        $user->save();
-        return redirect('users/'.$user->id);
-    });
+//    Route::put('users/{id}', 'UsersController@update');
 /*===========================================================================*/
 
 
-
+/*===========================================================================*/
+/*                        Users Controller Mapping                           */
+/*===========================================================================*/
+    Route::resource('users','UsersController');
+/*===========================================================================*/
 
 
