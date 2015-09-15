@@ -1,5 +1,9 @@
 @extends('templates.main')
-        
+
+@section('title')
+    Create Account
+@stop
+
 @section('content')
 			<h2>Create new Account</h2>
 			{!! Form::open(array('url' => 'users')) !!}

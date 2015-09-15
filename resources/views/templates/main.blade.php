@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Document</title>
+	<title>@yield('title')</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 

@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+    My Profile
+@stop
+
 @section('content')
 			<h2>My Profile</h2>
 			
@@ -16,5 +20,6 @@
 			<h4>{{$user->username}}</h4>
 			
 			<button>Edit</button>
+			
 			
 @stop

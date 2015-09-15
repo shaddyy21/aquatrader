@@ -1,4 +1,8 @@
 @extends('templates.main')
+
+@section('title')
+    Contact
+@stop
         
 @section('content')
 			<h2>Contact</h2>

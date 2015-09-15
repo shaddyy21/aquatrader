@@ -1,5 +1,9 @@
 @extends('templates.main')
-        
+
+@section('title')
+    Edit User
+@stop
+
 @section('content')
 			<h2>Edit Profile</h2>
 			{!! Form::model($user,array('url' => 'users/'.$user->id,'method'=> 'put')) !!}

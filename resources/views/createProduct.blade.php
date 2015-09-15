@@ -1,5 +1,9 @@
 @extends('templates.main')
-        
+
+@section('title')
+    Create Products
+@stop
+
 @section('content')
 			<h2>Add new product</h2>
 			{!! Form::open(['url' => 'products','files'=>true]) !!}

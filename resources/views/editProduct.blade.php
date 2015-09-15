@@ -1,5 +1,9 @@
 @extends('templates.main')
-        
+
+@section('title')
+    Edit Product
+@stop
+
 @section('content')
 			<h2>Edit product</h2>
 			{!! Form::model($product,array('url' => 'products/'.$product->id,'method'=> 'put')) !!}

@@ -27,7 +27,7 @@ class UpdateUserRequest extends Request
             "firstname"=>"required",
            "lastname"=>"required",
            "email"=>"required",
-            "username"=>"required|unique:users,username,".$this->route('id'),
+            "username"=>"required|unique:users,username,".$this->route('users'),
         ];
     }
 }

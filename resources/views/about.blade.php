@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+    About
+@stop
+
 @section('content')
 			<h2>About</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse suscipit cupiditate quo consectetur impedit sit repellendus dolores nemo. Fuga, nostrum!</p>

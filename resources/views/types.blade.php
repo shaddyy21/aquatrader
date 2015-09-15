@@ -1,5 +1,9 @@
 @extends('templates.main')
 
+@section('title')
+    {{$type->name}}
+@stop
+
 @section('content')
   <h2>{{$type->name}}</h2>
   
