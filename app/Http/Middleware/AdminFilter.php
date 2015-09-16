@@ -22,7 +22,7 @@ class AdminFilter
                if($request->ajax()){
                    return response('Unauthorized.', 401);
                 }else{
-                    return redirect('login')->with('message','Unauthorized access!');
+                    return redirect('login')->with('message','*Unauthorized access!');
                 }
             }
                 
