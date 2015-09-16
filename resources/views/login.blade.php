@@ -15,6 +15,8 @@
 					{!! Form::label('password', 'Password:') !!}
 					{!! Form::password('password') !!}
                     {!! $errors->first('password','<p class="error">:message</p>')!!}
+                    
+                    <p class="error">{{Session::get('message')}}</p>
 					
 					<input type="submit" id="sub" value="Login">
 				</fielset>

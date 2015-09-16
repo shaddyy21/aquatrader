@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth',['only' => ['create','edit','store','update']]);
+        $this->middleware('admin',['only' => ['create','edit','store','update']]);
+    }
+    
     /**
      * Display a listing of the resource.
      *

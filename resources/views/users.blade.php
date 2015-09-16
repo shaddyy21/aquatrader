@@ -19,7 +19,9 @@
 			<h5>User Name</h5>
 			<h4>{{$user->username}}</h4>
 			
-			<button>Edit</button>
+			<div id="editPro">
+                <a href="{{url('users/'.Auth::user()->id.'/edit')}}">Edit Profile</a>
+			</div>
 			
 			
 @stop

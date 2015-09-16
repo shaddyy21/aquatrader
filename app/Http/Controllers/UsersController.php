@@ -9,6 +9,14 @@ use App\Http\Controllers\Controller;
 
 class UsersController extends Controller
 {
+    
+    public function __construct(){
+        $this->middleware('auth',['except' => ['create','store']]);
+    }
+    
+    
+    
+    
     /**
      * Display a listing of the resource.
      *
@@ -23,15 +31,15 @@ class UsersController extends Controller
     /*===========================================================================*/
     /*                        Shows create user form                             */
     /*===========================================================================*/
-    /**
+    /*
      * Show the form for creating a new resource.
      *
      * @return Response
      */
-    public function create()
-    {
-       return view('createUser');
-    }
+        public function create()
+        {
+           return view('createUser');
+        }
     /*===========================================================================*/
     
     
@@ -44,13 +52,13 @@ class UsersController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(\App\Http\Requests\CreateUserRequest $request)
-    {
-        $user = \App\Models\User::create($request->all());
-        $user->password = bcrypt($user->password);
-        $user->save();
-        return redirect('users/'.$user->id);
-    }
+        public function store(\App\Http\Requests\CreateUserRequest $request)
+        {
+            $user = \App\Models\User::create($request->all());
+            $user->password = bcrypt($user->password);
+            $user->save();
+            return redirect('users/'.$user->id);
+        }
     /*===========================================================================*/
 
     
@@ -63,11 +71,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
-    {
-        $user = \App\Models\User::find($id);
-        return view('users',compact('user'));
-    }
+        public function show($id)
+        {
+            $user = \App\Models\User::find($id);
+            return view('users',compact('user'));
+        }
     /*===========================================================================*/
 
     
@@ -80,11 +88,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
-    {
-        $user = \App\Models\User::find($id);
-        return view('editUser',compact('user'));
-    }
+        public function edit($id)
+        {
+            $user = \App\Models\User::find($id);
+            return view('editUser',compact('user'));
+        }
     /*===========================================================================*/
     
     
@@ -98,13 +106,13 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(\App\Http\Requests\UpdateUserRequest $request, $id)
-    {
-        $user = \App\Models\User::find($id);
-        $user->fill($request->all());
-        $user->save();
-        return redirect('users/'.$user->id);
-    }
+        public function update(\App\Http\Requests\UpdateUserRequest $request, $id)
+        {
+            $user = \App\Models\User::find($id);
+            $user->fill($request->all());
+            $user->save();
+            return redirect('users/'.$user->id);
+        }
     /*===========================================================================*/
 
 
@@ -114,8 +122,8 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+        public function destroy($id)
+        {
+            //
+        }
 }

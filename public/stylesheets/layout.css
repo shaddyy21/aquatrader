@@ -53,8 +53,6 @@ a{
 img{
 	width: 100%;
 	height: auto;
-	-moz-border-radius: 0.25em;
-	-webkit-border-radius: 0.25em;
 	border-radius: 0.25em;
 
 }
@@ -84,8 +82,6 @@ img{
 	line-height: 1.5em;
 	text-align: right;
 	padding-right: 0.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	z-index: 10;
 	border: 1px transparent solid;
@@ -106,13 +102,9 @@ img{
 	display: block;
 	line-height: 1.5em;
 	border: 1px transparent solid;
-
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
 	border-radius: 0;
 
 	-moz-border-top-left-radius: 0.125em;
-	-webkit-border-top-left-radius: 0.125em;
 	border-top-left-radius: 0.125em;
 
 
@@ -162,25 +154,18 @@ img{
 		border-bottom: thin dotted rgb(200,200,200);
 
 		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		-ms-transition: all 0.3s;
-		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
 
 	ul a:hover, .button{
-		background: white; /* Old browsers */
-		background: white -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,112,255, 0.5) 100%); /* FF3.6+ */
+		background: white; /* Old browsers */ /* FF3.6+ */
 		background: white -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,112,255, 0.5))); /* Chrome,Safari4+ */
-		background: white -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* Chrome10+,Safari5.1+ */
-		background: white -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* Opera11.10+ */
-		background: white -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* IE10+ */
+		background: white -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* Chrome10+,Safari5.1+ */ /* Opera11.10+ */ /* IE10+ */
+		background: white -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,112,255, 0.5) 100%);
 		background: white linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* W3C */
 		border:thin solid #aaa;
 		border-top:thin solid #ccc;
 		border-left:thin solid #ccc;
-		-moz-border-radius: 0.25em;
-		-webkit-border-radius: 0.25em;
 		border-radius: 0.25em;
 
 
@@ -337,6 +322,32 @@ img{
     color: red;
 }
 
+#editPro {
+    margin-top: 0.5em;
+    padding: 10px 0 2.5px 0;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.88em;
+    border: thin  dotted;
+    border-bottom: thin dotted;
+    border-bottom-left-radius: 1.25em;
+    border-bottom-right-radius: 1.25em;
+    border-top-right-radius: 1.25em;
+    border-top-left-radius: 1.25em;
+    overflow: hidden;
+/*    line-height: 1.5em;*/
+
+}
+
+#editPro:hover{
+    background: white -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,112,255, 0.5))); /* Chrome,Safari4+ */
+    background: white -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* Chrome10+,Safari5.1+ */ /* Opera11.10+ */ /* IE10+ */
+    background: white -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,112,255, 0.5) 100%);
+    background: white linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,112,255, 0.5) 100%); /* W3C */
+}
+
+
 /* #Font-Face
 ================================================== */
 /* 	This is the proper syntax for an @font-face file
@@ -353,4 +364,7 @@ img{
 	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
 	    font-weight: normal;
 	    font-style: normal; }
+/*==================================================*/
+
+
 
