@@ -4,7 +4,7 @@ $(function(){
         $(".error").addClass("animated shake");
     });
     
-    $("#addtocart").on("click", function (e){
+    $(".addtocart").on("click", function (e){
         e.preventDefault();
         $(".addCart").removeClass("hide");
         setTimeout(function(){

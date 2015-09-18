@@ -65,7 +65,7 @@
                         <li><a href="{{url('users/create')}}">Sign Up</a></li>
 					@endif
 					
-					<li><a href="" >2 items <i class="icon-shopping-cart"></i></a></li>
+					<li><a href="{{url('cart')}}" >My Cart<i class="icon-shopping-cart"></i></a></li>
 					<li><a href="{{url('about')}}">About</a></li>
 					<li><a href="{{url('contact')}}">Contact</a></li>
 				</ul>

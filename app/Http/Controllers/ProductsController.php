@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class ProductsController extends Controller
 {
@@ -122,6 +123,10 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = \App\Models\Product::find($id);
+        
+        $product->delete();
+        
+        return redirect('types/'.$product->type->id);
     }
 }
