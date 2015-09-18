@@ -414,8 +414,8 @@ img{
 .btnCart{
     position: absolute;
     top: 0.5em;
-    left: 8em;
-    font-size: 0.7em;
-    width: 150px;
+    left: 11em;
+/*    font-size: 0.5em;*/
+    width: 6.em;
     
 }

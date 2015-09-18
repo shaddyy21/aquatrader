@@ -72,7 +72,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = \App\Models\Product::find($id);
+        return view('product',['product'=>$product]);
     }
     /*===========================================================================*/
     

@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4"
+                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/a081a0c2f14486254464f1a657595f5a6b3092f4",
-                "reference": "a081a0c2f14486254464f1a657595f5a6b3092f4",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/3a422c73f7bc556d39571f436b61fd58ccae0eb0",
+                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-09-02 15:55:05"
+            "time": "2015-09-17 13:29:15"
         },
         {
             "name": "guzzle/guzzle",
@@ -463,12 +463,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "415b5d824e15ee7cd18b8b23f96ae32b0b51d6a0"
+                "reference": "a100253a71c5edf7edf56eb1efdf7d2422a85aaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/415b5d824e15ee7cd18b8b23f96ae32b0b51d6a0",
-                "reference": "415b5d824e15ee7cd18b8b23f96ae32b0b51d6a0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a100253a71c5edf7edf56eb1efdf7d2422a85aaa",
+                "reference": "a100253a71c5edf7edf56eb1efdf7d2422a85aaa",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-09-16 16:57:12"
+            "time": "2015-09-17 22:40:01"
         },
         {
             "name": "laravelcollective/html",
@@ -1910,12 +1910,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "7487ad99791894b9b327d1d4824186aebfcb2cfd"
+                "reference": "9ed31f6d6e9542425f98eea2ea4f21c7eacb0103"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/7487ad99791894b9b327d1d4824186aebfcb2cfd",
-                "reference": "7487ad99791894b9b327d1d4824186aebfcb2cfd",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9ed31f6d6e9542425f98eea2ea4f21c7eacb0103",
+                "reference": "9ed31f6d6e9542425f98eea2ea4f21c7eacb0103",
                 "shasum": ""
             },
             "require": {
@@ -1961,7 +1961,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2015-09-09 17:42:36"
+            "time": "2015-09-15 12:30:50"
         },
         {
             "name": "vlucas/phpdotenv",
