@@ -1,3 +1,4 @@
+@if(Request::ajax() == false)
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -71,10 +72,11 @@
 				</ul>
 			</nav>
 		</header>
-		
     <div class="main group">
+@endif()
     	@yield('content')
     </div>
+@if(Request::ajax() == false)
     <footer></footer>
 
 	</div><!-- container -->
@@ -86,6 +88,8 @@
 <!--==========jQuery==============================-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{asset('js/jQScript.js')}}"></script>
+    <script src="{{asset('js/jQuery.js')}}"></script>
+    <script src="{{asset('js/spin.js')}}"></script>
 </body>
 </html>
+@endif()

@@ -419,3 +419,27 @@ img{
     width: 6.em;
     
 }
+
+.pagination {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    clear: both;
+    margin: 2em;
+}
+.pagination li {
+	text-align: center;
+    margin-left: 2em;
+    padding: 0;
+}
+
+.active{
+    text-align: center;
+}
+.active span{
+	text-align: center;
+    text-decoration: underline;
+    text-underline-position: left;
+    padding: 0;
+}

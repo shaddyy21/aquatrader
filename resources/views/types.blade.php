@@ -7,7 +7,10 @@
 @section('content')
   <h2>{{$type->name}}</h2>
   
-  @foreach($type->products as $product)
+  <?php $products = $type->products()->paginate(6);
+    $products->setPath("");
+  ?>
+  @foreach($products as $product)
 			<article class="group">
 				<img src="{{asset('productphotos/'.$product->photo)}}" alt="">
 				<h4>{{$product->name}}</h4>
@@ -31,4 +34,6 @@
                 </span>
 			</article>
     @endforeach
+    
+    {!! $products->render() !!}
 @stop
