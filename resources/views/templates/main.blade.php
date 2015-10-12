@@ -88,8 +88,10 @@
 <!--==========jQuery==============================-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{asset('js/jQuery.js')}}"></script>
-    <script src="{{asset('js/spin.js')}}"></script>
+    <script src="{{asset('js/Spin.js')}}"></script>
+    <script src="{{asset('js/jquery.history.js')}}"></script>
+     <script src="{{asset('js/jQuery.js')}}"></script>
+     <script src="{{asset('js/Editable.js')}}"></script>
 </body>
 </html>
 @endif()

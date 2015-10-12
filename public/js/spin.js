@@ -148,15 +148,15 @@
   // Built-in defaults
 
   var defaults = {
-    lines: 13             // The number of lines to draw
-  , length: 24             // The length of each line
-  , width: 18              // The line thickness
-  , radius: 25            // The radius of the inner circle
-  , scale: 1.0            // Scales overall size of the spinner
-  , corners: 0.4            // Roundness (0..1)
+    lines: 17            // The number of lines to draw
+  , length: 0            // The length of each line
+  , width: 16              // The line thickness
+  , radius: 50            // The radius of the inner circle
+  , scale: 0.50            // Scales overall size of the spinner
+  , corners: 0.5            // Roundness (0..1)
   , color: '#000'         // #rgb or #rrggbb
-  , opacity: 0.35         // Opacity of the lines
-  , rotate: 44             // Rotation offset
+  , opacity: 0         // Opacity of the lines
+  , rotate: 30             // Rotation offset
   , direction: 1          // 1: clockwise, -1: counterclockwise
   , speed: 1.7              // Rounds per second
   , trail: 55            // Afterglow percentage

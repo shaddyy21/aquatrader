@@ -9,6 +9,7 @@
   
   <?php $products = $type->products()->paginate(6);
     $products->setPath("");
+    sleep(1);
   ?>
   @foreach($products as $product)
 			<article class="group">
