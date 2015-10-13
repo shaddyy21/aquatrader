@@ -115,7 +115,7 @@ class UsersController extends Controller
             $value = $request->input("value");
             $field = $request->input("field");
             
-//            $user->$field = $field;
+            $user->$field = $field;
             $user->save();
             return $value;
 //            return redirect('users/'.$user->id);

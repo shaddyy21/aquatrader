@@ -8,7 +8,7 @@
 			<h2>My Profile</h2>
 			
 			<h5>First Name:</h5>
-			<h4 data-field="First Name">{{$user->firstname}}</h4>
+			<h4 data-field="firstname">{{$user->firstname}}</h4>
 			
 			<h5>Last Name:</h5>
 			<h4 data-field="Last Name">{{$user->lastname}}</h4>
