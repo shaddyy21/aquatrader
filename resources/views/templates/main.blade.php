@@ -78,6 +78,7 @@
     </div>
 @if(Request::ajax() == false)
     <footer></footer>
+    <div id="token" hidden>{{ csrf_token() }}</div>
 
 	</div><!-- container -->
 
