@@ -108,14 +108,14 @@ class UsersController extends Controller
      * @return Response
      */
 //        public function update(\App\Http\Requests\UpdateUserRequest $request, $id)
-        public function update(Request $request,$id)
+        public function update(Request $request, $id)
         {
             $user = \App\Models\User::find($id);
 //            $user->fill(Request::all());
             $value = $request->input("value");
             $field = $request->input("field");
             
-            $user->$field = $field;
+            $user->$field = $value;
             $user->save();
             return $value;
 //            return redirect('users/'.$user->id);

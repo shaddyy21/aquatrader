@@ -61,23 +61,37 @@ $(function(){
     /*=============================================================================================================*/
     /*                                                  Editable                                                   */
     /*=============================================================================================================*/
-        $("[data-field]").each("click",function(){
+        $("[data-field]").each(function(i,e){
             var url = window.location.href;
             var options = {
                 event: "dblclick",
+                cssclass: "editable",
                 type: "textarea",
                 submitdata: {
                     _method: "PUT",
                     _token: $("#token").text(),
-                    field: $(this).attr("data-field")
+                    field: $(e).attr("data-field")
                 },
-                clear: "Clear",
                 cancel: "Cancel",
-                submit: "OK"
+                submit: "Save",
+                indicator: "Saving..........."
             };
-            $(this).editable(url,options);
-           
-           
+            $(e).editable(url,options);
         });
+   /*=============================================================================================================*/
+  
+    
     /*=============================================================================================================*/
+    /*                                         WYSIWYG                                                             */
+    /*=============================================================================================================*/
+        $(document).on("DOMNodeInserted",function(e){
+            if($(e.target).hasClass("editable")){
+                tinymce.editors=[];
+                tinymce.init({selector:'.editable textarea'});
+            }
+        });
+    
+    /*=============================================================================================================*/
+    
+    
 });

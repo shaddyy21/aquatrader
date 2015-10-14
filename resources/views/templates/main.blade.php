@@ -88,11 +88,12 @@
 
 <!--==========jQuery==============================-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
     <script src="{{asset('js/Spin.js')}}"></script>
     <script src="{{asset('js/jquery.history.js')}}"></script>
-     <script src="{{asset('js/jQuery.js')}}"></script>
-     <script src="{{asset('js/Editable.js')}}"></script>
+    <script src="{{asset('js/Editable.js')}}"></script>
+    <script src="{{asset('js/jQuery.js')}}"></script>
 </body>
 </html>
 @endif()
